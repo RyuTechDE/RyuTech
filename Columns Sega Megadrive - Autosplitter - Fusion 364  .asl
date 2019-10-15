@@ -22,7 +22,7 @@ start
 split
 {
 	
-		return (settings["LevelSplit"] && old.LevelCount < current.LevelCount) || (settings["PointSplit"] && current.PointCount > old.PointCount);
+		return (settings["LevelSplit"] && old.LevelCount < current.LevelCount) || (settings["LevelSplit"] && old.Level100 == 0 && current.Level100 == 1) || (settings["PointSplit"] && current.PointCount > old.PointCount);
 
 }
 
