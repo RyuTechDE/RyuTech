@@ -1,20 +1,20 @@
 state("Fusion")
 {
-	short GameState: "Fusion.exe", 0x2A52D4, 0xC200;
+	byte GameState: "Fusion.exe", 0x2A52D4, 0xC201;
 	short PointCount: "Fusion.exe", 0x2A52D4, 0xC820;
-	short LevelCount: "Fusion.exe", 0x2A52D4, 0xC832;
+	byte LevelCount: "Fusion.exe", 0x2A52D4, 0xC833;
 }
 
 state("Gens")
 {
-	short GameState: "Gens.exe", 0x40F5C, 0xC200;
+	byte GameState: "Gens.exe", 0x40F5C, 0xC201;
 	short PointCount: "Gens.exe", 0x40F5C, 0xC820;
-	short LevelCount: "Gens.exe", 0x40F5C, 0xC832; 
+	byte LevelCount: "Gens.exe", 0x40F5C, 0xC833; 
 }
 
 start
 {
-	return current.GameState == 3 && old.GameState == 771;
+	return current.GameState == 0 && old.GameState == 3;
 }
 
  
